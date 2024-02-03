@@ -19,12 +19,68 @@
 	{% block script %}
     <script type="text/javascript" src="{% static 'work.js' %}" defer></script>
     {% endblock %}
-	<title>Plagcheck </title>	
+	<title>Home </title>	
 </head>
+<style >
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+	background: #1c92d2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #1c92d2, #f2fcfe);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #1c92d2, #f2fcfe); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+main{
+	height: 100vh;
+	width: 100vw;
+	display: inline-flex;
+	justify-content: center;
+	padding: 15%;
+}
+
+h1{
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: .1em;
+}
+	
+</style>
+
 <body> 
-	{% block content %}
-	<h1>404 Pages Not Found</h1>
-	{% endblock%}
+
+<main>
+<div>
+<h1>The best way to </br> learn is to do !</h1></br>
+ <button style="
+ 	margin-top: 30%;
+ 	width: 500px;
+ 	height: 50px;
+ 	color: black;
+ 	background: red;
+ 	border-radius: 15px;
+" >Click Here !</button>
+<div>
+<form style="display: none;" method="POST">{% csrf_token %}
+	<input type="submit" name="Login Now" style="display: none !important;">
+</form>
+</main>
+
+<script type="text/javascript">
+    sum = document.querySelector("input[type=submit]");
+    but = document.querySelector("button");
+    but.addEventListener('click', () =>{
+        sum.click()
+    });
+
+</script>
 
 </body>	
 </html>

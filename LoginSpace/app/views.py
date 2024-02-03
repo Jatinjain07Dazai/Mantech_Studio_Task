@@ -13,6 +13,8 @@ def login(request):
 
 
 def next(request):
+	if request.POST:
+		return render(request, "end.html", {})
 	return render(request, "next.html", {})
 
 
